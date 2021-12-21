@@ -1,0 +1,29 @@
+.covid-updates {
+  & #block-views-block-covid19-updates-block-1 {
+    width: 900px;
+    padding: 20px;
+    margin: 30px 20px 20px 2.22vw;
+    box-shadow: 0 1px 16px 10px rgba(64, 64, 64, 0.08);
+    border-radius: 16px;
+  }
+  & ul {
+    padding: 25px;
+  }
+  & li {
+    padding: 2px;
+    font-size: 26px;
+    list-style-type: disc;
+    color: #404040;
+    font-weight: 500;
+    & a {
+      color: #404040;
+      font-weight: bolder;
+      text-decoration: revert;
+    }
+  }
+  & h2 {
+    padding: 4px 0px 12px 0px;
+    color: #fa6400;
+    border-bottom: 1px solid grey;
+  }
+}

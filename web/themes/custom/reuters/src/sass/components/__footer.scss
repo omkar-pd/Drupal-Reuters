@@ -1,0 +1,138 @@
+.footer-second,
+.footer-first,
+.footer {
+  border-top: 1px solid #d0d0d0;
+  padding: 10px;
+  & a:hover {
+    text-decoration: revert;
+  }
+}
+.footer-second {
+  & #block-footersecond > ul {
+    padding-left: 0.82vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 2.22222vw;
+
+    & li:not(:nth-child(4)) {
+      grid-column: auto/span 2;
+    }
+    & li:nth-child(4) {
+      grid-column: 7 / span 3;
+      grid-row: 1;
+    }
+    & a {
+      font-size: 17px;
+      color: $font-color;
+      font-weight: 600;
+    }
+    & span {
+      padding: 10px;
+      font-weight: 300;
+      margin: 0px 0 12px;
+      color: $font-color;
+    }
+  }
+  #block-footersecond > ul > li > ul {
+    margin-top: 10px;
+  }
+  #block-footersecond > ul > li > ul,
+  li {
+    padding: 5px;
+  }
+}
+
+.footer-first .footer-card {
+  margin-right: -2.22vw;
+  padding-bottom: 15px;
+  & .views-row {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  & .views-col {
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 16px 10px #f4f4f4;
+    background: #fff;
+    padding: 11px 2px;
+    margin-left: 32px;
+    box-sizing: border-box;
+    height: 188px;
+    min-width: 202px;
+    overflow: hidden;
+    grid-row: 1/1;
+    & a {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(0, 0, 0);
+    }
+    & a:hover {
+      text-decoration: revert;
+    }
+    & p {
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.43;
+    }
+  }
+}
+
+.footer-first #block-cardtitles {
+  display: flex;
+  width: 63%;
+  color: $font-color;
+  justify-content: space-between;
+  margin: 12px 0px 25px 2.22vw;
+}
+.footer .contextual-links {
+  display: none;
+}
+.footer {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 14px;
+  padding: 0px 10px 0px 2.22vw;
+
+  & ul {
+    display: flex;
+    margin-top: 10px;
+    & a {
+      color: $font-color;
+    }
+  }
+  & #block-footer ul {
+    & li {
+      padding: 5px 15px 5px 0px;
+    }
+    & a {
+      font-weight: 600;
+    }
+  }
+  & #block-footermenuleft {
+    grid-column: 1;
+  }
+  & #block-footerrightmenu1 {
+    grid-row: 1;
+
+    grid-column: 2;
+    & ul {
+      justify-content: end;
+      & li {
+        padding: 5px 15px 5px 0px;
+      }
+      & a {
+        font-weight: 600;
+      }
+    }
+  }
+  & #block-footerrightmenu2 {
+    grid-column: 2;
+    & ul {
+      justify-content: end;
+      padding-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+name: Javascript Editor
+type: module
+description: Customize your Javascript directly from the browser.
+package: Development
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-09-15
+version: '1.0.2'
+project: 'js_editor'
+datestamp: 1631737769

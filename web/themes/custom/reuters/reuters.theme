@@ -1,0 +1,27 @@
+<?php
+    function reuters_preprocess_node(&$variables) {
+    $variables['content']['title']=$variables['label'];
+    //dump($variables['content']);
+}
+
+function reuters_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+
+if ($form_id == 'user_login_form') {
+    $form['actions']['submit']['#value']="Sign In";
+    $form['name']['#title']="Email";
+    $form['forgot-password'] = array(
+      '#type' => 'text', 
+      '#title' => t(' forgot-password'),
+      '#markup' => t(' <a class="forgot-pass" href="/user/password">Forgot Password? <a> '), 
+      
+    );
+}
+if ($form_id == 'user_register_form') { 
+    $form['field_condi']['widget']['value']['#title']=t('I agree to the Reuters <a href="# ">
+    Terms & Conditions </a> and <a href="#">Privacy Statement </a> ');
+    $form['actions']['submit']['#value']="Sign Up";
+}
+
+//dump($form);
+
+}

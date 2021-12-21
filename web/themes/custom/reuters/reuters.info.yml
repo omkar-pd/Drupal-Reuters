@@ -1,0 +1,23 @@
+name: Reuters
+type: theme
+base theme: stable
+description: "A Custom Theme for Blog Site"
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: custom
+
+regions:
+  header: Header
+  primary_menu: "Primary menu"
+  content: "Content"
+  covid_updates: "Covid19_updates"
+  latest_stories: "Latest Stories"
+  special_report: "Special Report"
+  category: "Category wise news"
+  not_visible: "Invisible"
+  footer_second: "Footer Second"
+  footer_first: "Footer First"
+  footer: "Footer"
+
+libraries:
+  - reuters/global
