@@ -241,8 +241,8 @@ input[type="password"]:focus-visible,
   border-top: 1px solid grey;
 }
 
-.login-form-wrapper {
-  @include break(lg) {
+@include break(lg) {
+  .login-form-wrapper {
     & > div {
       grid-template-columns: repeat(4, 1fr);
       padding-left: 4.26667vw;
