@@ -1423,10 +1423,6 @@ a:hover {
   }
 }
 
-header {
-  position: relative;
-}
-
 .page-header {
   position: absolute;
   font-size: 32px;
@@ -1455,6 +1451,9 @@ header {
   font-weight: 600;
 }
 
+.news-list-wrapper .news-list > a {
+  display: none;
+}
 .news-list-wrapper .news-item:first-child {
   display: flex;
   flex-direction: column;
@@ -1465,8 +1464,6 @@ header {
 .news-list-wrapper .news-item:first-child .views-field-created {
   padding: 0 18px;
   order: -1;
-  margin-top: -16px;
-  margin-left: 195px;
 }
 .news-list-wrapper .news-item:first-child .views-field-body {
   font-size: 20px;
@@ -1624,4 +1621,114 @@ header {
   .news-list-wrapper .news-list .news-item:nth-child(3) .views-field-field-featured-image img {
     height: auto;
   }
+}
+.feedback-button {
+  position: fixed;
+  top: 54%;
+  right: -31px;
+  z-index: 100;
+  background: #005da2;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  writing-mode: vertical-rl;
+  transform: rotateZ(270deg);
+  border-radius: 0;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  cursor: pointer;
+  transition: right 1s ease 0s;
+}
+
+#block-webform {
+  position: fixed;
+  top: 35%;
+  max-width: 380px;
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  background: white;
+  border: 2px solid #a6a6a6;
+  border-right: transparent;
+  padding: 10px;
+  right: 100%;
+}
+#block-webform #edit-reuters-icon {
+  width: 180px;
+  height: 80px;
+  margin-bottom: 50px;
+}
+#block-webform select {
+  width: 250px;
+  padding: 20px;
+  margin-top: 15px;
+  background: transparent;
+  border: 2px solid #9f9f9f;
+  border-radius: 4px;
+}
+#block-webform select:focus-visible {
+  border-color: #ff8000;
+}
+#block-webform select option {
+  color: #ff8000;
+}
+#block-webform form > * {
+  padding: 25px 5px;
+}
+#block-webform fieldset {
+  margin-top: 50px;
+}
+#block-webform label,
+#block-webform span {
+  font-size: 18px;
+  font-weight: 600;
+}
+#block-webform .webform-scale-option {
+  padding: 2px;
+}
+#block-webform .webform-scale-option .option {
+  font-size: 12px;
+}
+#block-webform .webform-scale-text-min,
+#block-webform .webform-scale-text-max {
+  font-size: 10px;
+}
+#block-webform .js-form-type-textarea * {
+  padding: 20px 0px;
+}
+#block-webform textarea {
+  max-width: 300px;
+  padding: 15px;
+  border: 2px solid #9f9f9f;
+  border-radius: 4px;
+}
+#block-webform .form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+#block-webform .form-actions input {
+  width: 160px;
+  height: 60px;
+  font-size: 26px;
+  border: transparent;
+  border-radius: 8px;
+  background: #ff8000;
+}
+#block-webform #edit-processed-text p {
+  font-size: 18px;
+  font-weight: 600;
+}
+#block-webform #edit-processed-text p a {
+  color: #ff8000;
+  text-decoration: revert;
+}
+#block-webform #edit-processed-text-01 p {
+  font-size: 14px;
+  text-align: center;
+}
+#block-webform #edit-processed-text-01 p a {
+  color: #404040;
 }

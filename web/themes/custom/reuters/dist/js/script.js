@@ -1,12 +1,23 @@
-// (function ($, Drupal) {
-//   Drupal.behaviors.stories = {
-//     attach: function (context, setting) {
-//       console.log("hello World");
-//     },
-//   };
-// })(jQuery, Drupal);
+(function ($, Drupal) {
+  Drupal.behaviors.stories = {
+    attach: function (context, setting) {},
+  };
+})(jQuery, Drupal);
 
 window.onload = function () {
+  const feedbackBtn = document.querySelector(".feedback-button");
+  const feedbackForm = document.querySelector("#block-webform");
+  feedbackBtn.addEventListener("click", () => {
+    if (!feedbackForm.classList.contains("slide-right")) {
+      feedbackForm.style.right = "0%";
+      feedbackBtn.style.right = "355px";
+      feedbackForm.classList.add("slide-right");
+    } else {
+      feedbackForm.style.right = "100%";
+      feedbackBtn.style.right = "-31px";
+      feedbackForm.classList.remove("slide-right");
+    }
+  });
   let marginR = -36;
   let marginL = 0;
   let containerIndex = 0;

@@ -1,0 +1,114 @@
+.feedback-button {
+  position: fixed;
+  top: 54%;
+  right: -31px;
+  z-index: 100;
+  background: rgb(0, 93, 162);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  writing-mode: vertical-rl;
+  transform: rotateZ(270deg);
+  border-radius: 0;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  cursor: pointer;
+  transition: right 1s ease 0s;
+}
+#block-webform {
+  position: fixed;
+  top: 35%;
+  max-width: 380px;
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  background: white;
+  border: 2px solid rgb(166, 166, 166);
+  border-right: transparent;
+  padding: 10px;
+  right: 100%;
+
+  & #edit-reuters-icon {
+    width: 180px;
+    height: 80px;
+    margin-bottom: 50px;
+  }
+  & select {
+    width: 250px;
+    padding: 20px;
+    margin-top: 15px;
+    background: transparent;
+    border: 2px solid #9f9f9f;
+    border-radius: 4px;
+    &:focus-visible {
+      border-color: #ff8000;
+    }
+    & option {
+      color: #ff8000;
+    }
+  }
+  & form > * {
+    padding: 25px 5px;
+  }
+  & fieldset {
+    margin-top: 50px;
+  }
+  & label,
+  span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  & .webform-scale-option {
+    padding: 2px;
+    & .option {
+      font-size: 12px;
+    }
+  }
+  & .webform-scale-text-min,
+  .webform-scale-text-max {
+    font-size: 10px;
+  }
+  & .js-form-type-textarea * {
+    padding: 20px 0px;
+  }
+  & textarea {
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid #9f9f9f;
+    border-radius: 4px;
+  }
+  & .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    & input {
+      width: 160px;
+      height: 60px;
+      font-size: 26px;
+      border: transparent;
+      border-radius: 8px;
+      background: #ff8000;
+    }
+  }
+  & #edit-processed-text {
+    & p {
+      font-size: 18px;
+      font-weight: 600;
+      & a {
+        color: #ff8000;
+        text-decoration: revert;
+      }
+    }
+  }
+  & #edit-processed-text-01 {
+    & p {
+      font-size: 14px;
+      text-align: center;
+      & a {
+        color: #404040;
+      }
+    }
+  }
+}
