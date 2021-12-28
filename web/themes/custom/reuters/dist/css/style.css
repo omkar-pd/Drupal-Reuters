@@ -1635,6 +1635,7 @@ a:hover {
   flex-direction: row;
   writing-mode: vertical-rl;
   transform: rotateZ(270deg);
+  border-color: transparent;
   border-radius: 0;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
@@ -1728,6 +1729,7 @@ a:hover {
 #block-webform #edit-processed-text-01 p {
   font-size: 14px;
   text-align: center;
+  padding: 8px;
 }
 #block-webform #edit-processed-text-01 p a {
   color: #404040;
