@@ -97,12 +97,11 @@
   
   <div > <h1> {{ content.title}} </h1> 
     {{ content.field_news_category}}
+  {{ drupal_block("social_sharing_buttons_block") }}
   </div>
   </div>
   <div class="news-body" {{ content_attributes }}>
     {{ content.field_featured_image}}
     {{ content.body }}
-    
   </div>
-
 </article>

@@ -28,3 +28,10 @@ a {
 .views-field-field-featured-image img:hover {
   filter: brightness(85%);
 }
+
+.special-report > div .demo-block {
+  grid-column: span 12;
+}
+.layout-content > div > .demo-block {
+  flex: 1;
+}

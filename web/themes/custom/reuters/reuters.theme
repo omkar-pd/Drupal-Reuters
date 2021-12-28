@@ -2,6 +2,8 @@
       function reuters_preprocess_node(&$variables) {
         $variables['content']['title']=$variables['label'];
         //dump($variables['content']);
+        //$blocks = Drupal\block\Entity\Block::loadMultiple();
+        //ksm($blocks);
 }
 
     function reuters_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state, $form_id){
