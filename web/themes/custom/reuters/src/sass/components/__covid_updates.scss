@@ -26,4 +26,11 @@
     color: #fa6400;
     border-bottom: 1px solid grey;
   }
+  @include break(lg) {
+    & #block-views-block-covid19-updates-block-1 {
+      width: auto;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  }
 }

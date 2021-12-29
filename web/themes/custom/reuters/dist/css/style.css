@@ -276,6 +276,31 @@ a {
   background-color: red;
 }
 
+@media (max-width: 992px) {
+  #block-views-block-home-page-blocks-block-1 {
+    width: auto;
+    box-shadow: 0 1px 16px 10px rgba(64, 64, 64, 0.08);
+    border-radius: 0;
+    margin-left: 0;
+  }
+
+  .top-news .item-list .list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+  .top-news .item-list .list li:first-child {
+    grid-column: span 2;
+  }
+  .top-news .item-list .list li:not(:first-child) {
+    grid-column: auto;
+  }
+}
+@media (max-width: 768px) {
+  .top-news .item-list .list li:not(:first-child) {
+    grid-column: span 2;
+    justify-content: space-between;
+  }
+}
 .covid-updates #block-views-block-covid19-updates-block-1 {
   width: 900px;
   padding: 20px;
@@ -302,6 +327,13 @@ a {
   padding: 4px 0px 12px 0px;
   color: #fa6400;
   border-bottom: 1px solid grey;
+}
+@media (max-width: 992px) {
+  .covid-updates #block-views-block-covid19-updates-block-1 {
+    width: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }
 
 .show {
@@ -461,6 +493,51 @@ a {
   padding: 28px 0px 28px 8px;
 }
 
+@media (max-width: 992px) {
+  .category {
+    padding: 0;
+  }
+  .category .views-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .category .news-card .views-col {
+    width: 100% !important;
+    min-height: auto;
+    min-width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  .category .news-card .views-col img {
+    min-height: 50px;
+    max-height: 83px;
+    border-radius: 8px;
+  }
+  .category .views-field-field-featured-image {
+    grid-row: 2/3;
+    grid-column: 4;
+  }
+  .category .views-field-created,
+.category .views-field-term-node-tid,
+.category .views-field-title {
+    grid-column: 1/4;
+  }
+
+  .category h2 {
+    padding: 28px 0px 28px 16px;
+  }
+}
+@media (max-width: 768px) {
+  .news-card .views-col {
+    grid-column: span 4;
+  }
+}
 .footer-second,
 .footer-first,
 .footer {
