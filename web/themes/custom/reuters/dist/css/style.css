@@ -1697,7 +1697,7 @@ a:hover {
 #block-webform .webform-scale-text-max {
   font-size: 10px;
 }
-#block-webform .js-form-type-textarea * {
+#block-webform .js-form-type-textarea > div {
   padding: 20px 0px;
 }
 #block-webform textarea {
@@ -1705,6 +1705,9 @@ a:hover {
   padding: 15px;
   border: 2px solid #9f9f9f;
   border-radius: 4px;
+}
+#block-webform textarea:focus-visible {
+  outline-color: #ff8000;
 }
 #block-webform .form-actions {
   display: flex;
@@ -1733,4 +1736,44 @@ a:hover {
 }
 #block-webform #edit-processed-text-01 p a {
   color: #404040;
+}
+#block-webform .fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#block-webform .fieldset-wrapper #edit-radio {
+  display: flex;
+}
+#block-webform .fieldset-wrapper #edit-radio .js-form-item {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  align-items: center;
+}
+#block-webform .fieldset-wrapper #edit-radio .js-form-item input[type=radio] {
+  width: 18px;
+  height: 21px;
+}
+#block-webform .fieldset-wrapper #edit-radio .js-form-item input[type=radio]:focus {
+  border: 5px solid red;
+}
+#block-webform .fieldset-wrapper #edit-radio .js-form-item label {
+  font-size: 10px;
+  color: #404040;
+  padding-top: 5px;
+}
+#block-webform .fieldset-wrapper .field-prefix,
+#block-webform .fieldset-wrapper .field-suffix {
+  font-size: 10px;
+  order: -1;
+  font-weight: 500;
+}
+#block-webform .fieldset-wrapper .field-prefix {
+  margin-bottom: -12px;
+  padding-left: 5px;
+}
+#block-webform .fieldset-wrapper .field-suffix {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 8px;
 }
