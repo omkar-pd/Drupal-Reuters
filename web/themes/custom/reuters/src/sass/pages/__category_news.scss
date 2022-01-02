@@ -181,7 +181,7 @@
         & .views-field-field-featured-image {
           order: -3;
           & img {
-            height: auto;
+            min-height: 210px;
             border-bottom-right-radius: 0px;
             border-bottom-left-radius: 0;
           }

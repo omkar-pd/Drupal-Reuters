@@ -1,6 +1,38 @@
 (function ($, Drupal) {
   Drupal.behaviors.stories = {
-    attach: function (context, setting) {},
+    attach: function (context, setting) {
+      const tbmNav = document.querySelector(".tbm-nav");
+      const root = document.getElementsByTagName("html")[0];
+      const hamburgerMenu = document.querySelector(".hamburger-menu");
+      const closeIcon = document.querySelector(".close-icon");
+      const feedbackBtn = document.querySelector(".feedback-button");
+
+      hamburgerMenu.addEventListener("click", () => {
+        tbmNav.classList.add("mob-nav");
+        root.classList.add("scroll");
+        feedbackBtn.style.display = "none";
+      });
+      closeIcon.addEventListener("click", () => {
+        tbmNav.classList.remove("mob-nav");
+        root.classList.remove("scroll");
+        feedbackBtn.style.display = "block";
+      });
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.documentElement.scrollTop > 49 &&
+          document.documentElement.scrollTop <= 450
+        ) {
+          tbmNav.classList.add("on-scroll");
+          console.log(document.documentElement.scrollTop);
+        } else {
+          tbmNav.classList.remove("on-scroll");
+        }
+      }
+    },
   };
 })(jQuery, Drupal);
 

@@ -1,3 +1,6 @@
+header {
+  position: relative;
+}
 .layout-content > div {
   display: flex;
   & #block-views-block-read-next-block-block-1 {
@@ -311,6 +314,7 @@ a:hover {
     }
     & #block-views-block-read-next-block-block-3 {
       margin-top: 0;
+      padding-left: 0px;
       & .horizontal {
         display: grid;
         grid-template-rows: 1fr 1fr;
