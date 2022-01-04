@@ -214,15 +214,16 @@
   .nav {
     & .tbm-nav .close-icon {
       display: block;
-      font-weight: 500;
+      width: 51px;
       position: absolute;
       top: 20px;
       right: 20px;
-      text-align: center;
-      width: 51px;
-      border-radius: 50%;
+      z-index: 11;
       box-shadow: 0 0 1.11111vw rgb(50 50 93 / 25%),
         0 0 0.34722vw rgb(77 77 77 / 10%);
+      border-radius: 50%;
+      text-align: center;
+      font-weight: 500;
       line-height: 1.44;
     }
     & .mob-nav {

@@ -13,6 +13,7 @@ regions:
   covid_updates: "Covid19_updates"
   latest_stories: "Latest Stories"
   special_report: "Special Report"
+  talking_points: "Talking Points"
   category: "Category wise news"
   not_visible: "Invisible"
   footer_second: "Footer Second"

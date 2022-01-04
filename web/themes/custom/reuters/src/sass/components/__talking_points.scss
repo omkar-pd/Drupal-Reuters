@@ -1,0 +1,41 @@
+.talking-points {
+  h2 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+}
+.point-wrapper {
+  & .point-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .point-item {
+      padding: 15px;
+      & img:hover {
+        filter: brightness(85%);
+      }
+    }
+    & .point-item img {
+      border-radius: 16px;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+@include break2(md) {
+  .talking-points h2 {
+    padding-left: 2.22vw;
+  }
+  .point-wrapper {
+    padding: 0 0.22222vw 0 1.22222vw;
+  }
+  .point-wrapper .point-list {
+    flex-direction: row;
+
+    & img {
+      max-height: 330px;
+    }
+  }
+}
