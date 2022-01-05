@@ -18,8 +18,13 @@
       border-radius: 16px;
       padding: 8px 20px;
       margin: 8px;
+      color: #404040;
+      &:hover {
+        color: #000;
+        border-color: #404040;
+      }
       & a {
-        color: #404040;
+        color: inherit;
         font-weight: 600;
       }
     }

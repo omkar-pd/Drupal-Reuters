@@ -42,11 +42,18 @@
       background-color: transparent;
       border: 1px solid grey;
       color: grey;
+      &:hover {
+        border-color: black;
+        color: #000;
+      }
     }
     & .register {
       background-color: black;
       border: none;
       color: white;
+      &:hover {
+        background-color: #404040;
+      }
     }
   }
 

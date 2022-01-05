@@ -120,10 +120,17 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   border: 1px solid grey;
   color: grey;
 }
+.nav .right-menu .login:hover {
+  border-color: black;
+  color: #000;
+}
 .nav .right-menu .register {
   background-color: black;
   border: none;
   color: white;
+}
+.nav .right-menu .register:hover {
+  background-color: #404040;
 }
 .nav .tbm-nav {
   width: fit-content;
@@ -605,6 +612,11 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   font-weight: 600;
   font-size: 16px;
   transition: all 0.15s ease;
+  cursor: pointer;
+}
+.buttons-menu button:hover {
+  border-color: black;
+  color: #000;
 }
 .buttons-menu .buttons-right {
   margin-right: 1.2rem;
@@ -614,6 +626,9 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   border-color: transparent;
   background: #000;
   color: #fff;
+}
+.buttons-menu .selected:hover {
+  background-color: #404040;
 }
 
 #block-views-block-latest-stories-block-1 h2 {
@@ -1719,9 +1734,14 @@ a:hover {
   border-radius: 16px;
   padding: 8px 20px;
   margin: 8px;
+  color: #404040;
+}
+.links-wrapper .link-list .link-item:hover {
+  color: #000;
+  border-color: #404040;
 }
 .links-wrapper .link-list .link-item a {
-  color: #404040;
+  color: inherit;
   font-weight: 600;
 }
 
