@@ -495,6 +495,45 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   }
 }
 
+.report-wrapper {
+  position: relative;
+  padding-left: 2.22222vw;
+  padding-right: 2.22222vw;
+}
+.report-wrapper .report-body-wrapper {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  z-index: 1;
+  color: #fff;
+  max-width: 550px;
+}
+.report-wrapper .report-body-wrapper .header {
+  font-size: 20px;
+  padding: 8px;
+}
+.report-wrapper .report-body-wrapper a {
+  font-size: 48px;
+  color: white;
+}
+.report-wrapper .report-body-wrapper .report-body {
+  font-size: 20px;
+  padding: 15px 0;
+  line-height: 1.4;
+}
+.report-wrapper img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  border-radius: 8px;
+}
+@media (max-width: 576px) {
+  .report-wrapper img {
+    height: 100vh;
+  }
+}
+
 .talking-points h2 {
   padding-left: 20px;
   padding-bottom: 10px;
@@ -1053,6 +1092,33 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+.login-form-wrapper .social-auth {
+  background-color: white;
+  max-width: 280px;
+  padding: 10px;
+  padding-bottom: 0;
+  margin: 10px auto 0px auto;
+  order: 3;
+}
+.login-form-wrapper .social-auth .google-auth, .login-form-wrapper .social-auth .facebook-auth {
+  width: 110px;
+  height: 100%;
+  margin: 10px auto 10px auto;
+  padding: 14px;
+  border-radius: 8px;
+  background-color: black;
+  border: transparent;
+  font-weight: 600;
+  text-align: center;
+}
+.login-form-wrapper .social-auth .google-auth i, .login-form-wrapper .social-auth .facebook-auth i {
+  font-size: 1.5rem;
+  color: green;
+  vertical-align: sub;
+}
+.login-form-wrapper .social-auth .facebook-auth i {
+  color: blue;
+}
 .login-form-wrapper .description,
 .login-form-wrapper #ajax-wrapper,
 .login-form-wrapper #edit-contact,
@@ -1120,6 +1186,7 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
 .login-form-wrapper .user-login-form .form-item label {
   color: #404040;
   padding: 5px;
+  padding-left: 0;
   font-size: 18px;
   font-weight: 600;
 }
@@ -1138,6 +1205,7 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   font-weight: 600;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 .login-form-wrapper .user-login-form .forgot-pass {
   color: #404040;

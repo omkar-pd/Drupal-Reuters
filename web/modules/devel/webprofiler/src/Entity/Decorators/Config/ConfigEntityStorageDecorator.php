@@ -15,12 +15,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Class ConfigEntityStorageDecorator.
  */
-class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEntityStorageInterface, ImportableEntityStorageInterface, EntityHandlerInterface {
+class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEntityStorageInterface, ImportableEntityStorageInterface, EntityHandlerInterface
+{
 
   /**
    * @param \Drupal\Core\Config\ConfigEntityStorageInterface $controller
    */
-  public function __construct(ConfigEntityStorageInterface $controller) {
+  public function __construct(ConfigEntityStorageInterface $controller)
+  {
     parent::__construct($controller);
 
     $this->entities = [];
@@ -29,14 +31,16 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
   /**
    * {@inheritdoc}
    */
-  public function resetCache(array $ids = NULL) {
+  public function resetCache(array $ids = NULL)
+  {
     $this->getOriginalObject()->resetCache($ids);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function loadMultiple(array $ids = NULL) {
+  public function loadMultiple(array $ids = NULL)
+  {
     $entities = $this->getOriginalObject()->loadMultiple($ids);
 
     $this->entities = array_merge($this->entities, $entities);
@@ -47,7 +51,8 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
   /**
    * {@inheritdoc}
    */
-  public function load($id) {
+  public function load($id)
+  {
     $entity = $this->getOriginalObject()->load($id);
 
     $this->entities[$id] = $entity;
@@ -58,28 +63,32 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
   /**
    * {@inheritdoc}
    */
-  public function loadUnchanged($id) {
+  public function loadUnchanged($id)
+  {
     return $this->getOriginalObject()->loadUnchanged($id);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function loadRevision($revision_id) {
+  public function loadRevision($revision_id)
+  {
     return $this->getOriginalObject()->loadRevision($revision_id);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function deleteRevision($revision_id) {
+  public function deleteRevision($revision_id)
+  {
     $this->getOriginalObject()->deleteRevision($revision_id);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function loadByProperties(array $values = []) {
+  public function loadByProperties(array $values = [])
+  {
     $entities = $this->getOriginalObject()->loadByProperties($values);
 
     $this->entities = array_merge($this->entities, $entities);
@@ -90,70 +99,88 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
   /**
    * {@inheritdoc}
    */
-  public function create(array $values = []) {
+  public function create(array $values = [])
+  {
     return $this->getOriginalObject()->create($values);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function delete(array $entities) {
+  public function delete(array $entities)
+  {
     $this->getOriginalObject()->delete($entities);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function save(EntityInterface $entity) {
+  public function save(EntityInterface $entity)
+  {
     return $this->getOriginalObject()->save($entity);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function hasData() {
+  public function hasData()
+  {
     return $this->getOriginalObject()->hasData();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getQuery($conjunction = 'AND') {
+  public function getQuery($conjunction = 'AND')
+  {
     return $this->getOriginalObject()->getQuery($conjunction);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getEntityTypeId() {
+  public function getEntityTypeId()
+  {
     return $this->getOriginalObject()->getEntityTypeId();
+  }
+
+    /**
+   * {@inheritdoc}
+   */
+  public function getEntityClass(?string $bundle = NULL): string {
+
+    return $this->getOriginalObject()->getEntityClass($bundle);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getEntityType() {
+  public function getEntityType()
+  {
     return $this->getOriginalObject()->getEntityType();
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function getIDFromConfigName($config_name, $config_prefix) {
+  public static function getIDFromConfigName($config_name, $config_prefix)
+  {
     return substr($config_name, strlen($config_prefix . '.'));
   }
 
   /**
    * {@inheritdoc}
    */
-  public function createFromStorageRecord(array $values) {
+  public function createFromStorageRecord(array $values)
+  {
     return $this->getOriginalObject()->createFromStorageRecord($values);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function updateFromStorageRecord(ConfigEntityInterface $entity, array $values) {
+  public function updateFromStorageRecord(ConfigEntityInterface $entity, array $values)
+  {
     return $this->getOriginalObject()
       ->updateFromStorageRecord($entity, $values);
   }
@@ -161,56 +188,64 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
   /**
    * {@inheritdoc}
    */
-  public function getAggregateQuery($conjunction = 'AND') {
+  public function getAggregateQuery($conjunction = 'AND')
+  {
     return $this->getOriginalObject()->getAggregateQuery($conjunction);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function loadOverrideFree($id) {
+  public function loadOverrideFree($id)
+  {
     return $this->getOriginalObject()->loadOverrideFree($id);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function loadMultipleOverrideFree(array $ids = NULL) {
+  public function loadMultipleOverrideFree(array $ids = NULL)
+  {
     return $this->getOriginalObject()->loadMultipleOverrideFree($ids);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function importCreate($name, Config $new_config, Config $old_config) {
+  public function importCreate($name, Config $new_config, Config $old_config)
+  {
     $this->getOriginalObject()->importCreate($name, $new_config, $old_config);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function importUpdate($name, Config $new_config, Config $old_config) {
+  public function importUpdate($name, Config $new_config, Config $old_config)
+  {
     $this->getOriginalObject()->importUpdate($name, $new_config, $old_config);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function importDelete($name, Config $new_config, Config $old_config) {
+  public function importDelete($name, Config $new_config, Config $old_config)
+  {
     $this->getOriginalObject()->importDelete($name, $new_config, $old_config);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function importRename($old_name, Config $new_config, Config $old_config) {
+  public function importRename($old_name, Config $new_config, Config $old_config)
+  {
     $this->getOriginalObject()->importRename($old_name, $new_config, $old_config);
   }
 
   /**
    * {@inheritdoc}
    */
-  public static function createInstance(ContainerInterface $container, EntityTypeInterface $entity_type) {
+  public static function createInstance(ContainerInterface $container, EntityTypeInterface $entity_type)
+  {
     return new static(
       $entity_type,
       $container->get('config.factory'),
@@ -222,8 +257,8 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
   /**
    * {@inheritdoc}
    */
-  public function restore(EntityInterface $entity) {
+  public function restore(EntityInterface $entity)
+  {
     $this->getOriginalObject()->restore($entity);
   }
-
 }

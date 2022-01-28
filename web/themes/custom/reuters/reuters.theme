@@ -15,8 +15,17 @@
          '#type' => 'text', 
          '#title' => t(' forgot-password'),
          '#markup' => t(' <a class="forgot-pass" href="/user/password">Forgot Password? <a> '), 
-      
-     );
+        );
+
+        $form['google_auth'] = [
+            '#type' => "button",
+            '#title' => t('Google'),
+            '#markup' => t('<div class="social-auth">
+            <a class="google-auth" href="/user/login/google"><i class="bi bi-google"></i></a>
+            <a href="/user/login/facebook" class="facebook-auth"><i class="bi bi-facebook"></i></a>
+                            </div>'),
+        ];
+        //dump($form);
     }
         if ($form_id == 'user_register_form') { 
         $form['field_condi']['widget']['value']['#title']=t('I agree to the Reuters <a href="# ">

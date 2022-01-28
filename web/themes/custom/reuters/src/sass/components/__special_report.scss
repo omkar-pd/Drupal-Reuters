@@ -1,0 +1,38 @@
+ .report-wrapper {
+     position: relative;
+     padding-left: 2.22222vw;
+     padding-right: 2.22222vw;
+    & .report-body-wrapper {
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        z-index: 1;
+        color: #fff;
+        max-width: 550px;
+        & .header {
+            font-size: 20px;
+            padding: 8px;
+        }
+        & a {
+            font-size: 48px;
+            color: white;
+        }
+        & .report-body {
+            font-size: 20px;
+            padding: 15px 0;
+            line-height: 1.4;
+        }
+    }
+    & img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(0.5);
+        border-radius: 8px;
+    }
+    @include break(sm){
+        & img {
+            height: 100vh;
+        }
+    }
+}
